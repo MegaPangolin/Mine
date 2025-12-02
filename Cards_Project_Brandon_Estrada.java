@@ -51,11 +51,24 @@ public class Cards_Project_Brandon_Estrada
 
             switch (choice)
             {
-                case 1 -> simulation();
-                case 2 -> playGame();
-                case 3 -> viewStats();
-                case 4 -> running = false;
-                default -> System.out.println("Invalid entry. Choose 1 thru 4.");
+                case 1:
+                    simulation();
+                    break;
+
+                case 2:
+                    playGame();
+                    break;
+
+                case 3:
+                    viewStats();
+                    break;
+
+                case 4:
+                    running = false;
+                    break;
+
+                default:
+                    System.out.println("Invalid entry. Choose 1 thru 4.");
             }
         }
         System.out.println("Sayonara Sucker!");
@@ -81,13 +94,13 @@ public class Cards_Project_Brandon_Estrada
         printSuitStats(suitCounts, draws);
     }
 
-    public static void playGame
+    public static void playGame()
     {
         System.out.println("\n--- GAME MODE ---");
         System.out.print("How many rounds do you want to play? ");
         int rounds = input.nextInt();
 
-        int score = 0
+        int score = 0;
 
         for (int i = 0; i < rounds; i++)
         {
@@ -95,11 +108,11 @@ public class Cards_Project_Brandon_Estrada
             System.out.println("Guess the suit:");
             System.out.println("0 = Hearts, 1 = Diamonds, 2 = Clubs, 3 = Spades");
             System.out.print("Your guess: ");
-            int suess = input.nextInt();
+            int guess = input.nextInt();
 
             while (guess < 0 || guess > 3)
             {
-                System.out.print("Invalid. Guess 0-3: ";
+                System.out.print("Invalid. Guess 0-3: ");
                 guess = input.nextInt();
             }
 
