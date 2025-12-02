@@ -1,7 +1,10 @@
+Public class arrays.java
+
 Integer[][] raggedIntegerArray = {
     {1, 2, null, 3},
     {4, null, 5}
 };
+
 
 for (int i = 0; i < raggedIntegerArray.length; i++) {
     for (int j = 0; j < raggedIntegerArray[i].length; j++) {
